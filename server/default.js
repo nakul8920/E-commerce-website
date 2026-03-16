@@ -5,10 +5,11 @@ import { products } from './constants/product.js';
 
 const DefaultData = async () => {
     try {
-        await Product.deleteMany({});
-        await Product.insertMany(products);
+        const existing = await Product.estimatedDocumentCount();
+        if (existing > 0) return;
 
-        console.log('Data imported Successfully');
+        await Product.insertMany(products);
+        console.log('Default data imported successfully');
         
     } catch (error) {
         console.log('Error: ', error.message);
