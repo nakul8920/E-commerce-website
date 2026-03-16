@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 import { Button, Box, styled } from '@mui/material';
 import { ShoppingCart as Cart, FlashOn as Flash } from '@mui/icons-material';
 
@@ -34,8 +32,8 @@ const StyledButton = styled(Button)`
 const ActionItem = ({ product }) => {
     const navigate = useNavigate();
     const { id } = product;
-        
-    const [quantity, setQuantity] = useState(1);
+
+    const quantity = 1;
     const dispatch = useDispatch();
 
     const buyNow = async () => {

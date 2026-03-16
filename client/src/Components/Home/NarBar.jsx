@@ -34,7 +34,7 @@ const NavBar = ({ selectedCategory, onCategorySelect }) => {
                         onClick={() => onCategorySelect && onCategorySelect(temp.text)}
                         style={{ cursor: onCategorySelect ? 'pointer' : 'default', borderBottom: selectedCategory === temp.text ? '2px solid #2874f0' : 'none' }}
                     >
-                        <img src={temp.url} style={{  width: 64 }} />
+                        <img src={temp.url} alt={temp.text} style={{ width: 64 }} />
                         <Text>{temp.text}</Text>
                     </Container>
                 ))

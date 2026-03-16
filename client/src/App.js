@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Home, NotFound } from './Components/default';
+import { Home } from './Components/default';
 import { Box } from '@mui/material'
 
 //components

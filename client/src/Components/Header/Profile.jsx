@@ -1,6 +1,5 @@
 import { useState } from 'react';
 
-import { Link } from 'react-router-dom';
 import { Typography, Menu, MenuItem, Box, styled } from '@mui/material';
 import { PowerSettingsNew } from '@mui/icons-material';
 
