@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-import autoIncrement from 'mongoose-auto-increment';
 
 const productSchema = new mongoose.Schema({
     id: String,
@@ -20,9 +19,6 @@ const productSchema = new mongoose.Schema({
     is_prime: Boolean,
     sales_volume: String
 });
-
-autoIncrement.initialize(mongoose.connection);
-productSchema.plugin(autoIncrement.plugin, 'product');
 
 const products = mongoose.model('product', productSchema);
 
